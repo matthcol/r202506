@@ -25,3 +25,16 @@ colnames(communes_france_2025)
 
 # colonne 17: => epci_code
 colnames(communes_france_2025)[17]
+
+
+communes_france_2025 %>%
+  filter(
+    (startsWith(nom_standard, "L'") |
+       startsWith(nom_standard, "Le ") |
+       startsWith(nom_standard, "La ") |
+       startsWith(nom_standard, "Les ")) &
+      population >= 30000
+  ) %>%
+  arrange(desc(population)) %>%
+  select(nom_standard, population)
+

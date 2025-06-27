@@ -6,4 +6,7 @@
 - https://data.grandlyon.com/portail/fr/jeux-de-donnees/temperatures-en-temps-reel-sur-la-metropole-de-lyon/api
 
 ## Installer packages
+```
 install.packages("tidyverse")
+installed.packages()
+```
